@@ -1,0 +1,15 @@
+<center>
+<br>
+<h1>Lista de Jogos: </h1>
+<br>
+</center>
+
+{{#each posts}}
+    <h3>Id: {{id}}</h3>
+    <h3>Título: {{titulo}}</h3>
+    <h3>Conteudo: {{conteudo}}</h3><br>
+    <p>Data: {{createdAt}}</p>
+    <a href="/deletar/{{id}}"><button class="btn btn-secondary">Deletar</button></a>
+    <a href="/alterar/{{id}}"><button class="btn btn-secondary">Alterar</button></a>
+    <hr>
+{{/each}}

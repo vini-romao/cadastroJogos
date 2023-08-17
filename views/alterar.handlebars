@@ -1,0 +1,36 @@
+<form action="/update" method="POST">
+
+    {{#each posts}}
+
+    <br>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Código</label>
+        <input type="text" name="id" class="form-control" id="exampleFormControlInput1" value="{{id}}" readonly="true">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Título</label>
+        <input type="text" name="titulo" class="form-control" id="exampleFormControlInput1" value="{{titulo}}"
+            readonly="true">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Conteúdo</label>
+        <textarea name="conteudo" value="{{conteudo}}" class="form-control" id="exampleFormControlTextarea1" rows="3"
+            placeholder="História do jogo"></textarea>
+    </div>
+
+    {{!-- <p>Código: </p>
+    <input type="text" name="id" value="{{id}}" readonly="true">
+
+    <p>Título: </p>
+    <input type="text" name="titulo" value="{{titulo}}" readonly="true">
+
+    <p>Conteúdo: </p>
+    <textarea name="conteudo" value="{{conteudo}}"></textarea><br> --}}
+    <center>
+        <input type="submit" class="btn btn-secondary" value="Alterar">
+    </center>
+    <hr>
+    {{/each}}
+</form>
